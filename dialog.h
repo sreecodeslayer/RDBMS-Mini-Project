@@ -2,7 +2,7 @@
 #define DIALOG_H
 
 #include <QDialog>
-
+#include "newaccount.h"
 namespace Ui {
 class Dialog;
 }
@@ -20,6 +20,8 @@ private slots:
     void on_PasswordField_returnPressed();
     void on_UsernameField_returnPressed();
     void on_LogInButton_clicked();
+
+    void on_NewAccountButton_clicked();
 
 private:
     Ui::Dialog *ui;

@@ -55,6 +55,10 @@ void Dialog::on_LogInButton_clicked()
 {
     //Log in check and Log in
 
+}
 
-
+void Dialog::on_NewAccountButton_clicked()
+{
+    NewAccount *dialog=new NewAccount();
+    dialog->show();
 }
