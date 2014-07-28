@@ -33,7 +33,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../Icons/lock-icon.png</normaloff>../Icons/lock-icon.png</iconset>
+    <normaloff>:/new/prefix1/lock-icon.png</normaloff>:/new/prefix1/lock-icon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -55,11 +55,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-
-
-
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Log In</string>

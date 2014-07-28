@@ -21,3 +21,6 @@ HEADERS  += dialog.h \
 
 FORMS    += dialog.ui \
     newaccount.ui
+
+RESOURCES += \
+    Resources/Icons/Icon.qrc
