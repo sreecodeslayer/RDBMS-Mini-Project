@@ -60,5 +60,6 @@ void Dialog::on_LogInButton_clicked()
 void Dialog::on_NewAccountButton_clicked()
 {
     NewAccount *dialog=new NewAccount();
+    dialog->setWindowTitle("Register");
     dialog->show();
 }

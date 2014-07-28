@@ -6,22 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>403</width>
+    <height>310</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Resources/Icons/Icon.qrc">
+    <normaloff>:/new/prefix1/lock-icon.png</normaloff>:/new/prefix1/lock-icon.png</iconset>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
         <string>Enter the details</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -38,6 +42,9 @@
              <property name="text">
               <string>Username</string>
              </property>
+             <property name="buddy">
+              <cstring>Username_Reg</cstring>
+             </property>
             </widget>
            </item>
            <item>
@@ -45,12 +52,18 @@
              <property name="text">
               <string>Password</string>
              </property>
+             <property name="buddy">
+              <cstring>Password_Reg</cstring>
+             </property>
             </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_3">
              <property name="text">
               <string>Confirm Password</string>
+             </property>
+             <property name="buddy">
+              <cstring>ConfirmPass_Reg</cstring>
              </property>
             </widget>
            </item>
@@ -79,53 +92,108 @@
          </item>
         </layout>
        </widget>
-      </widget>
-     </item>
-     <item>
-      <widget class="QDialogButtonBox" name="buttonBox">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="standardButtons">
-        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-       </property>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>250</y>
+          <width>158</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="Register_Button">
+           <property name="text">
+            <string>Register</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Cancel_Button">
+           <property name="text">
+            <string>Cancel</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </item>
     </layout>
    </item>
   </layout>
  </widget>
- <resources/>
+ <tabstops>
+  <tabstop>Username_Reg</tabstop>
+  <tabstop>Password_Reg</tabstop>
+  <tabstop>ConfirmPass_Reg</tabstop>
+ </tabstops>
+ <resources>
+  <include location="Resources/Icons/Icon.qrc"/>
+ </resources>
  <connections>
   <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>NewAccount</receiver>
-   <slot>accept()</slot>
+   <sender>Username_Reg</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Password_Reg</receiver>
+   <slot>setFocus()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
+     <x>161</x>
+     <y>86</y>
     </hint>
     <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
+     <x>194</x>
+     <y>113</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>buttonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>NewAccount</receiver>
-   <slot>reject()</slot>
+   <sender>Password_Reg</sender>
+   <signal>returnPressed()</signal>
+   <receiver>ConfirmPass_Reg</receiver>
+   <slot>setFocus()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
+     <x>243</x>
+     <y>121</y>
     </hint>
     <hint type="destinationlabel">
-     <x>286</x>
-     <y>274</y>
+     <x>272</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ConfirmPass_Reg</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Register_Button</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cancel_Button</sender>
+   <signal>clicked()</signal>
+   <receiver>NewAccount</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>388</x>
+     <y>309</y>
     </hint>
    </hints>
   </connection>
