@@ -18,6 +18,7 @@ public:
 private slots:
     void on_Register_Button_clicked();
 
+
 private:
     Ui::NewAccount *ui;
 };

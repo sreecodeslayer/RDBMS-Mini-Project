@@ -2,6 +2,7 @@
 #include "ui_newaccount.h"
 #include <QString>
 #include <QDebug>
+#include <QLabel>
 
 QString New_username;
 QString New_password;
@@ -33,5 +34,6 @@ void NewAccount::on_Register_Button_clicked()
     else
     {
         //Re-Confirm
+        ui->re_confirm->setText("<font color = red> Please re-enter the password correctly!</font>");
     }
 }
