@@ -2,13 +2,22 @@
 <ui version="4.0">
  <class>NewAccount</class>
  <widget class="QDialog" name="NewAccount">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>403</width>
-    <height>310</height>
+    <width>407</width>
+    <height>359</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -22,14 +31,20 @@
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QGroupBox" name="groupBox">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="title">
         <string>Enter the details</string>
        </property>
        <widget class="QWidget" name="layoutWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>50</y>
+          <y>160</y>
           <width>281</width>
           <height>121</height>
          </rect>
@@ -39,6 +54,9 @@
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
             <widget class="QLabel" name="label">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="text">
               <string>Username</string>
              </property>
@@ -49,6 +67,9 @@
            </item>
            <item>
             <widget class="QLabel" name="label_2">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="text">
               <string>Password</string>
              </property>
@@ -59,6 +80,9 @@
            </item>
            <item>
             <widget class="QLabel" name="label_3">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="text">
               <string>Confirm Password</string>
              </property>
@@ -72,10 +96,17 @@
          <item>
           <layout class="QVBoxLayout" name="verticalLayout">
            <item>
-            <widget class="QLineEdit" name="Username_Reg"/>
+            <widget class="QLineEdit" name="Username_Reg">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLineEdit" name="Password_Reg">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="echoMode">
               <enum>QLineEdit::Password</enum>
              </property>
@@ -83,6 +114,9 @@
            </item>
            <item>
             <widget class="QLineEdit" name="ConfirmPass_Reg">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="echoMode">
               <enum>QLineEdit::Password</enum>
              </property>
@@ -93,10 +127,13 @@
         </layout>
        </widget>
        <widget class="QWidget" name="layoutWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>210</x>
-          <y>250</y>
+          <y>290</y>
           <width>158</width>
           <height>25</height>
          </rect>
@@ -104,6 +141,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
           <widget class="QPushButton" name="Register_Button">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="text">
             <string>Register</string>
            </property>
@@ -111,6 +151,9 @@
          </item>
          <item>
           <widget class="QPushButton" name="Cancel_Button">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="text">
             <string>Cancel</string>
            </property>
@@ -119,6 +162,9 @@
         </layout>
        </widget>
        <widget class="QLabel" name="re_confirm">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -129,6 +175,22 @@
         </property>
         <property name="text">
          <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>30</y>
+          <width>121</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="Resources/Bg-Images/UI-images.qrc">:/new/prefix1/account_and_control.png</pixmap>
         </property>
        </widget>
       </widget>
@@ -143,6 +205,7 @@
   <tabstop>ConfirmPass_Reg</tabstop>
  </tabstops>
  <resources>
+  <include location="Resources/Bg-Images/UI-images.qrc"/>
   <include location="Resources/Icons/Icon.qrc"/>
  </resources>
  <connections>
@@ -153,12 +216,12 @@
    <slot>setFocus()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>161</x>
-     <y>86</y>
+     <x>168</x>
+     <y>74</y>
     </hint>
     <hint type="destinationlabel">
-     <x>194</x>
-     <y>113</y>
+     <x>168</x>
+     <y>129</y>
     </hint>
    </hints>
   </connection>
@@ -169,12 +232,12 @@
    <slot>setFocus()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>243</x>
-     <y>121</y>
+     <x>246</x>
+     <y>110</y>
     </hint>
     <hint type="destinationlabel">
-     <x>272</x>
-     <y>149</y>
+     <x>246</x>
+     <y>166</y>
     </hint>
    </hints>
   </connection>
@@ -185,12 +248,12 @@
    <slot>setFocus()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>228</x>
-     <y>162</y>
+     <x>289</x>
+     <y>149</y>
     </hint>
     <hint type="destinationlabel">
-     <x>260</x>
-     <y>276</y>
+     <x>289</x>
+     <y>283</y>
     </hint>
    </hints>
   </connection>

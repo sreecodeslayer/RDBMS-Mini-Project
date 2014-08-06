@@ -22,18 +22,28 @@ NewAccount::~NewAccount()
 }
 
 void NewAccount::on_Register_Button_clicked()
-{
+{   //Get the Inputs
     New_username = ui->Username_Reg->text();
     New_password = ui->Password_Reg->text();
     Confirm_password = ui->ConfirmPass_Reg->text();
+}
 
+
+void NewAccount::on_ConfirmPass_Reg_returnPressed()
+{
+    //Password Entry Confirm, Re-Confirm
     if(New_password == Confirm_password)
     {
-        //Create Account
+
+        connect(ui->ConfirmPass_Reg, SIGNAL(returnPressed()),ui->Register_Button,SLOT(click()));
+        ui->re_confirm->setText(""); //Set label back to empty
     }
     else
     {
-        //Re-Confirm
+
+        connect(ui->ConfirmPass_Reg, SIGNAL(returnPressed()),ui->ConfirmPass_Reg,SLOT(setFocus()));
         ui->re_confirm->setText("<font color = red> Please re-enter the password correctly!</font>");
     }
+
+
 }

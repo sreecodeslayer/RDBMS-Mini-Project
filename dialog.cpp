@@ -34,27 +34,17 @@ void Dialog::on_QuitButton_clicked()
     }
 }
 
-void Dialog::on_UsernameField_returnPressed()
-{
-    //Get Username
-     username = ui->UsernameField->text();
-}
-
-void Dialog::on_PasswordField_returnPressed()
-{
-    //Get Password
-
-    password = ui->PasswordField->text();
-
-
-
-
-}
-
 void Dialog::on_LogInButton_clicked()
 {
     //Log in check and Log in
+    username = ui->UsernameField->text();
+    password = ui->PasswordField->text();
 
+    /*if(password == from_dbpassword)
+     * {
+     *  open the accountui of the person
+     * }
+     */
 }
 
 void Dialog::on_NewAccountButton_clicked()

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>account_and_control.png</file>
+        <file>key.png</file>
+    </qresource>
+</RCC>
