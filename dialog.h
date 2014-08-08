@@ -17,8 +17,7 @@ public:
 
 private slots:
     void on_QuitButton_clicked();
-    void on_PasswordField_returnPressed();
-    void on_UsernameField_returnPressed();
+
     void on_LogInButton_clicked();
 
     void on_NewAccountButton_clicked();

@@ -23,4 +23,7 @@ FORMS    += dialog.ui \
     newaccount.ui
 
 RESOURCES += \
-    Resources/Icons/Icon.qrc
+    Resources/Icons/Icon.qrc \
+    Resources/Bg-Images/UI-images.qrc
+
+OTHER_FILES +=
