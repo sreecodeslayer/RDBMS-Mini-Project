@@ -51,5 +51,6 @@ void Dialog::on_NewAccountButton_clicked()
 {
     NewAccount *dialog=new NewAccount();
     dialog->setWindowTitle("Register");
+    this->hide();
     dialog->show();
 }
