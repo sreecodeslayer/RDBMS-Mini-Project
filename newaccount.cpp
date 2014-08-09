@@ -31,19 +31,35 @@ void NewAccount::on_Register_Button_clicked()
 
 void NewAccount::on_ConfirmPass_Reg_returnPressed()
 {
+
+
+}
+
+void NewAccount::on_ConfirmPass_Reg_textEdited(const QString &arg1)
+{
+    confirm_password_check();
+}
+bool NewAccount::confirm_password_check()
+{
     //Password Entry Confirm, Re-Confirm
-    if(New_password == Confirm_password)
+    if(ui->Password_Reg->text() == ui->ConfirmPass_Reg->text())
     {
 
-        connect(ui->ConfirmPass_Reg, SIGNAL(returnPressed()),ui->Register_Button,SLOT(click()));
+        //connect(ui->ConfirmPass_Reg, SIGNAL(returnPressed()),ui->Register_Button,SLOT(click()));
         ui->re_confirm->setText(""); //Set label back to empty
+        return true;
     }
     else
     {
 
-        connect(ui->ConfirmPass_Reg, SIGNAL(returnPressed()),ui->ConfirmPass_Reg,SLOT(setFocus()));
-        ui->re_confirm->setText("<font color = red> Please re-enter the password correctly!</font>");
+        //connect(ui->ConfirmPass_Reg, SIGNAL(returnPressed()),ui->ConfirmPass_Reg,SLOT(setFocus()));
+        ui->re_confirm->setText("<font color = red> Password do not match!</font>");
+        return false;
     }
 
+}
 
+void NewAccount::on_Password_Reg_textEdited(const QString &arg1)
+{
+    confirm_password_check();
 }
