@@ -17,9 +17,13 @@ public:
 
 private slots:
     void on_Register_Button_clicked();
-
+    bool confirm_password_check();
 
     void on_ConfirmPass_Reg_returnPressed();
+
+    void on_ConfirmPass_Reg_textEdited(const QString &arg1);
+
+    void on_Password_Reg_textEdited(const QString &arg1);
 
 private:
     Ui::NewAccount *ui;
